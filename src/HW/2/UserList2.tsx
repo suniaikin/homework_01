@@ -11,11 +11,11 @@ export const UserList2 = (props: UserList2PropsType) => {
         <div id={"hw02-users"}>
             <h2>User List:</h2>
             <button id={"hw02-filter-button"} onClick={() => props.filterUsers}>
-                {users}
+                Filter
             </button>
             <ul>
                 {props.users.myFriends.map((user) => (
-                    <CurrentUser user={users} />
+                    <CurrentUser key={user.id} user={user} />
                 ))}
             </ul>
         </div>
